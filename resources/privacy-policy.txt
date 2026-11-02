@@ -1,0 +1,26 @@
+Solitaire Chess Privacy Policy
+Effective November 2, 2026
+
+Solitaire Chess runs on your device. The app does not collect or send your games,
+positions, engine analysis, or personal information to the developer. It has
+no account system, advertising, tracking, analytics SDK, or remote backend.
+
+Your game, moves, playing mode, orientation, chosen colour, and computer
+strength are saved locally to restore your session. Engine analysis runs
+locally using Stockfish on your device (the system package on Linux; bundled on Apple platforms). No internet connection is
+required for play or analysis.
+
+You can start a new game to replace the saved game. Changing a preference
+replaces the saved value for that preference. On Apple platforms, App Store transactions and any
+diagnostics you choose to share with Apple are handled by Apple under Apple's
+policies and your system settings.
+
+Support and privacy questions: https://thepeteriley.github.io/solitaire-chess-support/
+Full public policy: https://thepeteriley.github.io/solitaire-chess-support/privacy.html
+
+The support site is hosted on GitHub Pages. It uses no analytics scripts,
+advertising, embedded trackers, or contact forms added by the developer.
+GitHub may process technical visit information to operate its hosting service.
+Support uses public GitHub Issues and requires a GitHub account to post.
+Do not post private information. The public policy explains these services
+and links to GitHub's privacy statement.

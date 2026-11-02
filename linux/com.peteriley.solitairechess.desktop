@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Solitaire Chess
+Comment=Play chess with local Stockfish evaluation and candidate moves
+Exec=solitaire-chess
+Icon=com.peteriley.solitairechess
+Terminal=false
+Categories=Game;BoardGame;
+Keywords=chess;stockfish;analysis;
+StartupWMClass=solitaire-chess

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+release/
+qa/
+__pycache__/
+*.pyc
+.DS_Store

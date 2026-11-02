@@ -1,0 +1,29 @@
+{
+  "name": "solitaire-chess",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A quiet chess board with five Stockfish continuations",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "build": "vite build",
+    "start": "electron .",
+    "test": "node --test tests/*.test.cjs",
+    "test:ui": "node scripts/smoke.mjs",
+    "package:linux": "npm run build && node scripts/package-linux.mjs"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@electron/osx-sign": "2.7.2",
+    "@electron/packager": "^20.3.0",
+    "electron": "^45.2.1",
+    "playwright": "1.56.1",
+    "vite": "^8.3.5"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/thepeteriley/solitaire-chess-linux"
+}

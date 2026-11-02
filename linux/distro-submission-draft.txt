@@ -1,0 +1,15 @@
+DRAFT — package request; not sent to maintainers.
+
+Package: solitaire-chess
+Upstream: Pete Riley
+Description: Desktop chess board with live local evaluation and candidate variations.
+Audience: Chess players practising against an adjustable-strength computer or exploring positions.
+Features: Local Stockfish analysis, five candidate variations, computer opponent, Elo selection, FEN import, undo, move navigation and variation preview.
+Runtime: Electron/Chromium and React; chess.js for rules. Separate dependency on the distribution's stockfish package.
+Architectures prepared: amd64 and arm64.
+Licence: MIT. Third-party components retain their own licences.
+Source URL: https://github.com/thepeteriley/solitaire-chess-linux
+Support: https://thepeteriley.github.io/solitaire-chess-support/
+Packaging: Upstream .deb binaries for local APT installation. These bundle Electron, so distro policy and security-maintenance requirements must be discussed before proposing admission into an official archive.
+
+For Debian, consult the Work-Needing and Prospective Packages process; opening an RFP requests a package, whereas an ITP means committing to maintain it. Do not promise ongoing maintenance on Pete's behalf without agreement.
