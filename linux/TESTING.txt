@@ -1,0 +1,19 @@
+Solitaire Chess Linux 1.0.0 — verification, 2 November 2026
+
+Debian 13 amd64 (emulated on an ARM Linux VM): APT installation, desktop-file validation, six real Stockfish engine tests, and installed Electron UI checks passed.
+Debian 13 arm64 (native ARM Linux VM): APT installation, desktop-file validation, six real Stockfish engine tests, and installed Electron UI checks passed.
+Ubuntu 24.04 amd64 (emulated): APT dependency resolution/installation, six real Stockfish engine tests, and installed Electron UI checks passed.
+
+UI checks: 64 board squares; five candidate lines; controls visible in launch window; board flip; variation preview and keyboard navigation; return to game; legal moves; undo; computer opponent playing either side; one-legal-move position; checkmate; knight underpromotion; castling; en passant; no renderer errors. Footer uses device-neutral wording, and first/last navigation controls use SVG icons instead of font-dependent emoji.
+
+Linux uses the distro's Stockfish executable. UCI Elo limits are detected at runtime. Tests confirmed a correctly configured root-owned Chromium sandbox helper; the app runs as an ordinary user with its renderer sandbox enabled. Containers were given namespace capabilities to permit Chromium's sandbox, not --no-sandbox.
+
+Debian package checks confirmed root ownership, normal user-readable directories, executable launchers, helper mode 4755, MIT app licence, third-party notices, and exclusion of Apple binaries/profiles, App Store material and mobile source.
+
+An Ubuntu dependency check found that the unversioned libasound2 virtual package could select an OSS compatibility shim instead of ALSA. The released dependency requires a versioned ALSA package (>= 1.2.2), with t64/legacy alternatives. The corrected package passed Ubuntu gameplay checks.
+
+Limit: Container/Xvfb checks are not a test on Pete's physical laptop, real GPU, Wayland session, sound hardware, or every Debian derivative. Start with the amd64 package for an Intel/AMD laptop, or arm64 for ARM. Run dpkg --print-architecture if uncertain.
+
+Reproduce: sh linux/test-package.sh amd64
+           sh linux/test-package.sh arm64
+           sh linux/test-package.sh amd64 ubuntu:24.04
